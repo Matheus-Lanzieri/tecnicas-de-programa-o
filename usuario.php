@@ -1,5 +1,6 @@
 <?php
-    class Usuario{
+    class Usuario
+{
         //public $nome;
         //public $email;
         //public $idade;
@@ -25,8 +26,20 @@
         }
         public function setEmail($email)
         {
+            if(filter_var($email, FILTER_VALIDATE_EMAIL)){
             $this->email = $email;
+            } else {
+                echo "<p>O email não é válido {$this->getNome()}</p>";
+            }
         }
+
+        public function __construct($nome=null, $idade = null, $email = null)
+        {
+            $this->nome = $nome;
+            $this->idade = $idade;
+            $this-> email = $email;
+
+        }    
         
 
 }

@@ -24,6 +24,15 @@
     $aluno2->setNome ("Joaquim");
     $aluno2->setIdade  (30);
     $aluno2 ->setEmail  ("joaquim@icg.com.br");
+    
+    $aluno3 = new usuario();
+    $aluno3->setNome ("Epaminondas");
+    $aluno3->setIdade  (17);
+    $aluno3 ->setEmail  ("epaminandas#gfg.com.br");
+
+    $aluno4 = new usuario("alice", 22);
+    echo "<br>";
+    var_dump($aluno4);
 
     echo "<p>Nome: ".$aluno->getNome()."</p>";
     echo "<p>Idade: ".$aluno->getIdade()."</p>";   
@@ -33,4 +42,10 @@
     echo "<p>Idade: ".$aluno2->getIdade()."</p>";   
     echo "<p>Email: ".$aluno2->getEmail()."</p>";
     echo  "<br>";
+    echo "<p>Nome: ".$aluno3->getNome()."</p>";
+    echo "<p>Idade: ".$aluno3->getIdade()."</p>";   
+    echo "<p>Email: ".$aluno3->getEmail()."</p>";
+    echo  "<br>";
+
+
 ?>
